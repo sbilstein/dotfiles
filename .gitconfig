@@ -1,0 +1,30 @@
+[user]
+	name = Siggy Bilstein
+	email = sbilstein@slack-corp.com
+[push]
+	default = simple
+[fetch]
+	prune = true
+[alias]
+	authors = shortlog -s -n
+	co = checkout
+	st = status
+	br = branch
+	st = status -s
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+	update = "!git remote update -p; git merge --ff-only @{u}"
+  search = "!f() { git grep -In $1 -- $2; }; f"
+	pushf = push --no-verify --force-with-lease
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[rerere]
+	enabled = true
+[branch]
+	autosetuprebase = always
+[core]
+	excludesfile = ~/.gitignore_global
+
+[help]
+	autocorrect = 2
